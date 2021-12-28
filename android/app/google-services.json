@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "599662786034",
+    "project_id": "fir-bare-rn-check",
+    "storage_bucket": "fir-bare-rn-check.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599662786034:android:7ecd12aabc27e02e1b276b",
+        "android_client_info": {
+          "package_name": "com.ecommecern"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599662786034-f46ss3j7sn3f6o359p9dhtm5q05do2vk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ecommecern",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "599662786034-etbpc3l3cg0mh1catfs4smfrhucsr174.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHWblnu1zqSkg2xXFKq3oQX2XtdUUpdDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599662786034-etbpc3l3cg0mh1catfs4smfrhucsr174.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
