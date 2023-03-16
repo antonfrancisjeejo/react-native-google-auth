@@ -1,41 +1,37 @@
+import {StyleSheet, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
-import {View, Text, Button} from 'react-native';
-import {GoogleSignin} from '@react-native-community/google-signin';
+import {
+  GoogleSignin,
+  GoogleSigninButton,
+} from '@react-native-google-signin/google-signin';
 
 const App = () => {
   useEffect(() => {
-    GoogleSignin.configure({
-      webClientId:
-        '599662786034-etbpc3l3cg0mh1catfs4smfrhucsr174.apps.googleusercontent.com',
-    });
+    GoogleSignin.configure();
   }, []);
-  async function onGoogleButtonPress() {
+
+  async function login() {
     try {
-      // Get the users ID token
-      const {idToken} = await GoogleSignin.signIn();
-
-      // Create a Google credential with the token
-      const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-
-      // Sign-in the user with the credential
-      return auth().signInWithCredential(googleCredential);
+      const userInfo = await GoogleSignin.signIn();
+      console.log(userInfo);
     } catch (error) {
       console.log(error);
     }
   }
+
   return (
     <View>
-      <Text>Google Signin</Text>
-      <Button
-        title="Google Sign-In"
-        onPress={() =>
-          onGoogleButtonPress().then(() =>
-            console.log('Signed in with Google!'),
-          )
-        }
+      <Text>App</Text>
+      <GoogleSigninButton
+        style={{width: 192, height: 48}}
+        size={GoogleSigninButton.Size.Wide}
+        color={GoogleSigninButton.Color.Dark}
+        onPress={login}
       />
     </View>
   );
 };
 
 export default App;
+
+const styles = StyleSheet.create({});
